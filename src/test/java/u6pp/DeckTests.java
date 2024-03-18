@@ -16,7 +16,8 @@ public class DeckTests {
         assertEquals(DECK_SIZE, testDeck.numLeft());
     }
 
-    @Test
+    @SuppressWarnings("static-access")
+	@Test
     void dealAndNumLeftWorkCorrectly() throws Exception {
         Deck testDeck = new Deck();
         int expectedDeckSize = DECK_SIZE;
@@ -27,6 +28,8 @@ public class DeckTests {
             }
             expectedDeckSize -= testTimes;
             assertEquals(expectedDeckSize, testDeck.numLeft());
+            System.out.println("expectedDeckSize:"+expectedDeckSize);
+            System.out.println("testDeck.numLeft():"+testDeck.numLeft());
         }
     }
 
@@ -34,6 +37,8 @@ public class DeckTests {
     void newDeckDealsOutOnlyUniqueCards() throws Exception {
         Deck testDeck = new Deck();
         ArrayList<Card> dealtCards = DeckTests.dealOutDeck(testDeck);
+        System.out.println(testDeck.numLeft());
+        System.out.println(DeckTests.allUnique(dealtCards));
 
         assertAll("A new deck deals out all unique combinations of SUITS and VALUES",
             () -> assertEquals(0, testDeck.numLeft()),
@@ -49,7 +54,7 @@ public class DeckTests {
         ArrayList<Card> otherDealtCards = DeckTests.dealOutDeck(testDeck);
         testDeck.shuffle();
 
-        assertAll("A shuffled Deck is full size and different from a previously dealt deck", 
+        assertAll("A shuffled Deck is full size and different from a previously dealt deck",
             () -> assertEquals(DECK_SIZE, testDeck.numLeft()),
             () -> assertTrue(DeckTests.areDifferent(dealtCards, otherDealtCards))
         );

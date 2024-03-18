@@ -54,12 +54,12 @@ When the game ends, be sure to print the result *Blackjack*, *Bust*, *Win*, *Los
 ### PART B Required Methods
 
 1. `public Blackjack()`: This should instaniate any instance variables you have, especially your `Deck`. Don't forget, you are interacting with a *User* so you may need a `Scanner`.
-2. `public static int calcPoints(Card[] hand)`: This method takes an array of `Card`s and returns the amount of points that hand is worth. Does not alter parameters.
-3. `public static String determineResult(Card[] userHand, Card[] dealerHand)`: Returns a `String` in one of the following formats: `"User Wins"`, `"User Loses"`, or `"User Pushes"`. Does not alter parameters.
-4. `public static boolean isBust(Card[] hand)`: returns `true` if the hand is a *Bust*, `false` otherwise. Does not alter parameters.
-5. `public static boolean isBlackjack(Card[] hand)`: returns `true` if the hand is a *Blackjack*, `false` otherwise. Does not alter parameters.
-6. `public static boolean dealerKeepHitting(Card[] hand)`: return `true` if the dealer should keep hitting (score of hand is 16 or less), `false` otherwise. Does  not alter parameters.
-7. `public void play()`: The method to be called to actually play a game. This is where you implement the flow of the **Gameplay**.
+2. `public void play()`: The method to be called to actually play a game. This is where you implement the flow of the **Gameplay**.
+3. `public static int calcPoints(Card[] hand)`: This method takes an array of `Card`s and returns the amount of points that hand is worth. Does not alter parameters.
+4. `public static String determineResult(Card[] userHand, Card[] dealerHand)`: Returns a `String` in one of the following formats: `"User Wins"`, `"User Loses"`, or `"User Pushes"`. Does not alter parameters.
+5. `public static boolean isBust(Card[] hand)`: returns `true` if the hand is a *Bust*, `false` otherwise. Does not alter parameters.
+6. `public static boolean isBlackjack(Card[] hand)`: returns `true` if the hand is a *Blackjack*, `false` otherwise. Does not alter parameters.
+7. `public static boolean dealerKeepHitting(Card[] hand)`: return `true` if the dealer should keep hitting (score of hand is 16 or less), `false` otherwise. Does  not alter parameters.
 
 You may include any other `private` methods and instance variables you think applicable. You should have nothing else that is `public` other than what is listed above.
 

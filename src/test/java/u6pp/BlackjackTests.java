@@ -101,7 +101,8 @@ public class BlackjackTests {
                 () -> assertEquals("User Wins", Blackjack.determineResult(hand2, hand7)),
                 () -> assertEquals("User Wins", Blackjack.determineResult(hand7, hand6)),
                 () -> assertEquals("User Pushes", Blackjack.determineResult(hand2, hand2)),
-                () -> assertEquals("User Pushes", Blackjack.determineResult(hand7, hand7)));
+                () -> assertEquals("User Pushes", Blackjack.determineResult(hand7, hand7))
+        );
 
         assertAll("dealerKeepHitting does not alter parameters", 
                 () -> assertEquals(Arrays.toString(hand1Copy), Arrays.toString(hand1)),

@@ -120,4 +120,37 @@ public class Card implements Comparable<Card>{
         }
         return -1;
     } 
+    @SuppressWarnings("unlikely-arg-type")
+	public int valueMaker() {
+    	int value = 0;
+    	if (VALUES[0].equals(true)) {
+    		value = 2;
+    	}
+    	if (VALUES[1].equals(true)) {
+    		value = 3;
+    	}
+    	if (VALUES[2].equals(true)) {
+    		value = 4;
+    	}
+    	if (VALUES[3].equals(true)) {
+    		value = 5;
+    	}
+    	if (VALUES[4].equals(true)) {
+    		value = 6;
+    	}
+    	if (VALUES[5].equals(true)) {
+    		value = 7;
+    	}
+    	if (VALUES[6].equals(true)) {
+    		value = 8;
+    	}
+    	if (VALUES[7].equals(true)) {
+    		value = 9;
+    	}
+    	if (VALUES[8].equals(true)) {
+    		value = 10;
+    	}
+    	return value;
+    }
+
 }
